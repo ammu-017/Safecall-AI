@@ -1,0 +1,7 @@
+{
+  "name": "SafeCall AI",
+  "description": "Real-time scam call detection for elderly users analyzing conversational manipulation, social engineering, and fraud signals.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

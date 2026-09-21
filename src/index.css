@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Accessibility Modes */
+body.large-text-mode {
+  font-size: 115%;
+}
+
+body.large-text-mode h1 {
+  font-size: 2.25rem !important;
+}
+
+body.large-text-mode h2 {
+  font-size: 1.85rem !important;
+}
+
+body.large-text-mode p,
+body.large-text-mode span,
+body.large-text-mode button {
+  font-size: 1.1rem;
+}
+
+body.high-contrast-mode {
+  filter: contrast(118%);
+}
+
+body.high-contrast-mode .bg-white {
+  background-color: #ffffff !important;
+  border-color: #0f172a !important;
+}
+
+body.high-contrast-mode .text-slate-500,
+body.high-contrast-mode .text-slate-600 {
+  color: #1e293b !important;
+}
+
+/* Audio waveform animation */
+@keyframes pulse-wave {
+  0%, 100% { height: 10px; }
+  50% { height: 38px; }
+}
+
+.animate-waveform-bar {
+  animation: pulse-wave 1.1s ease-in-out infinite;
+}
